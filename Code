@@ -1,0 +1,5 @@
+!pip install -q \ langchain \
+langchain-community \ langchain-google-genai \ faiss-cpu \
+pypdf \
+gradio \
+google-generativeai
