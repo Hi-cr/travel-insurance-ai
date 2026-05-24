@@ -52,6 +52,14 @@ pip install sentence-transformers
 pip install transformers accelerate
 
 ```
+## Colab執行過程
+![demo](IMG_8847.jpeg)
+![demo](IMG_8848.jpeg)
+![demo](IMG_8849.jpeg)
+![demo](IMG_8850.jpeg)
+![demo](IMG_8851.jpeg)
+![demo](IMG_8852.jpeg)
+![demo](IMG_8853.jpeg)
 
 ## 網頁demo
 
