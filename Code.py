@@ -43,31 +43,40 @@ qa_pipeline = pipeline(
 )
 
 def ask(q):
-  
-  matched_docs = db. similarity_search(q, k=3)
-  
-  context = "\n".join([
-    doc. page_content
-    for doc in matched_docs
-    ］）
-  
+
+    # 找出最相關文件
+    matched_docs = db.similarity_search(q, k=3)
+
+    # 合併內容
+    context = "\n".join([
+        doc.page_content
+        for doc in matched_docs
+    ])
+
+    # Prompt
     prompt = f"""
 根據以下旅平險條款回答問題。
+
 條款內容：
 {context}
 
 問題：
 {q}
 
-請用繁體中文回答。
+請用繁體中文簡短回答。
 """
-  
-result = qa_pipeline(
-    prompt, 
-    max_new_tokens=200
+
+    # 生成回答
+    result = qa_pipeline(
+        prompt,
+        max_new_tokens=200
     )
 
-return result [0] ["generated_text"]
+    # 只保留新生成內容
+    answer = result[0]["generated_text"][len(prompt):]
+
+    return answer.strip()
+
 
 import gradio as gr
 
