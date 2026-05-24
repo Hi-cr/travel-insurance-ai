@@ -46,7 +46,7 @@ def ask(q):
   
   matched_docs = db. similarity_search(q, k=3)
   
-  context = "\n" join([
+  context = "\n".join([
     doc. page_content
     for doc in matched_docs
     ］）
@@ -69,5 +69,19 @@ result = qa_pipeline(
 
 return result [0] ["generated_text"]
 
-print（ask（"如何得知保險期間的始日與終日"））
+import gradio as gr
+
+demo = gr.Interface(
+    fn=ask,
+    inputs=gr.Textbox(
+        lines=2,
+        placeholder="請輸入保險問題..."
+    ),
+    outputs="text",
+    title="旅平險 AI 問答系統",
+    description="上傳保險條款後，可詢問相關問題"
+)
+
+demo.launch(share=True)
+
 
