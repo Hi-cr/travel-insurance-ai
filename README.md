@@ -50,3 +50,5 @@ pip install gradio
 pip install google-generativeai
 pip install sentence-transformers
 pip install transformers accelerate
+
+## demo
