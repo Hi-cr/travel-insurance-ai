@@ -69,5 +69,5 @@ result = qa_pipeline(
 
 return result [0] ["generated_text"]
 
-print（ask（"如何得知保險期間的始日與終日“））
+print（ask（"如何得知保險期間的始日與終日"））
 
