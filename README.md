@@ -37,6 +37,28 @@
 
 ---
 
+## 如何進行預測結果的正確性驗證
+
+驗證程式：
+```
+correct = 0
+
+for item in test_data:
+
+    pred = ask(item["question"])
+
+    if item["answer"] in pred:
+        correct += 1
+
+accuracy = correct / len(test_data)
+
+print("Accuracy:", accuracy)
+```
+
+本系統透過 RAG 架構，
+限制模型根據檢索到的條款回答，
+降低大型語言模型幻覺問題。
+
 
 ## 安裝套件
 
