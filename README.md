@@ -55,4 +55,6 @@ pip install transformers accelerate
 
 ## 網頁demo
 
+![demo](IMG_8854.png)
+
 
