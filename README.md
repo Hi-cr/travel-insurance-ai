@@ -28,6 +28,7 @@
 - HuggingFace Embeddings
 - Qwen2-1.5B-Instruct
 - Google Colab
+- gradio
 
 ---
 
