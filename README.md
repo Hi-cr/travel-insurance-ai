@@ -95,6 +95,8 @@ accuracy = correct / len(test_data)
 
 print("Accuracy:", accuracy)
 ```
+輸出：
+![demo](IMG_8864.jpeg)
 
 本系統透過 RAG 架構，
 限制模型根據檢索到的條款回答，
