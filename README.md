@@ -94,7 +94,7 @@ pip install transformers accelerate
 
 ## notebookLM與自己的系統的比較
 
-notebookLM：
+### notebookLM：
 
 優點
 - 有整理條文
@@ -111,7 +111,7 @@ notebookLM：
 
   
 
-自己的系統：
+### 自己的系統：
 
 優點：
 - 回答速度快
