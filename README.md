@@ -116,6 +116,7 @@ pip install transformers accelerate
 
 ```
 ## Colab執行過程
+網址：https://colab.research.google.com/drive/1g_GkCf57ODpgVMdRnU3iJthO3wow65O9?hl=zh-tw#scrollTo=aUeAA3tYXrX0
 ![demo](IMG_8847.jpeg)
 ![demo](IMG_8848.jpeg)
 ![demo](IMG_8849.jpeg)
