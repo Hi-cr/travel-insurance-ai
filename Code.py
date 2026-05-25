@@ -93,4 +93,66 @@ demo = gr.Interface(
 
 demo.launch(share=True)
 
+#驗證程式
+test_data = [
+
+    {
+        "question": "這份保險的免費申訴電話是多少？",
+        "answer": "0800-212-880"
+    },
+
+    {
+        "question": "本保險契約包含哪些承保項目？",
+        "answer": "旅遊傷害保險"
+    },
+
+    {
+        "question": "保險期間延長最長不得超過幾小時？",
+        "answer": "七十二小時"
+    },
+
+    {
+        "question": "未依約定交付保險費會如何？",
+        "answer": "自始不生效力"
+    },
+
+    {
+        "question": "海外旅行期間從何時開始計算？",
+        "answer": "完成出境手續"
+    },
+
+    {
+        "question": "重大燒燙傷保險的給付項目是什麼？",
+        "answer": "重大燒燙傷保險金"
+    },
+
+    {
+        "question": "保險契約解釋有疑義時應如何處理？",
+        "answer": "有利於被保險人的解釋"
+    }
+
+]
+
+correct = 0
+
+for item in test_data:
+
+    pred = ask(item["question"])
+
+    print("問題：", item["question"])
+    print("AI回答：", pred)
+    print("標準答案：", item["answer"])
+
+    if item["answer"] in pred:
+        print("結果：正確\n")
+        correct += 1
+    else:
+        print("結果：錯誤\n")
+
+accuracy = correct / len(test_data)
+
+print("Accuracy:", accuracy)
+
+
+
 
