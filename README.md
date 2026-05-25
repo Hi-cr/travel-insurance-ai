@@ -87,4 +87,6 @@ pip install transformers accelerate
 
 ![demo](IMG_8854.jpeg)
 
+## notebookLM執行結果
+
 
